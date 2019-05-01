@@ -17,13 +17,9 @@ def main():
 def sort():
     # Determine sort method
     try:
-        sort_type = int(input("1:Name 2:Time 3:Genre "))
-        if sort_type == 1:
-            video_games.sort(key=lambda game: game[0])
-        elif sort_type == 2:
-            video_games.sort(key=lambda game: game[1])
-        elif sort_type == 3:
-            video_games.sort(key=lambda game: (game[3], game[1]))
+        sort_type = int(input("0:Name 1:Time 4:Genre "))
+        if (sort_type == 0 or sort_type == 1 or sort_type == 4):
+            video_games.sort(key=lambda game: (game[sort_type], game[1]))
         else:
             video_games.sort(key=lambda game: game[1])
     except:
