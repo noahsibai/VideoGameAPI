@@ -28,6 +28,7 @@ def main():
     output()
 
 def add_new():
+    # Add New Video Game
     title = input("Title: ")
     time = float(input("Time: "))
     genre = input("Genre: ")
