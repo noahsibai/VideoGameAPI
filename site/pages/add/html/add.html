@@ -47,9 +47,42 @@
             </ul>
         </div>
     </nav>
+    <div>
+        <div class="form-group">
+            <label for=title>Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <input type="text" class="form-control" id="genre" placeholder="Genre">
+        </div>
+        <div class="form-group">
+            <label for="time">Time to Beat</label>
+            <input type="number" step="0.01" class="form-control" id="time" placeholder="Time to Beat">
+        </div>
+        <div class="form-group">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="completed" id="inlineRadio1" value="True">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="completed" id="inlineRadio2" value="False">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button onclick="add();" class="btn btn-primary">Add New</button>
+        </div>
+    </div>
 
-
-
+    <div class="toast" role="alert">
+        <div class="toast-header">
+            <button type="button" class="close" data-dismiss="toast">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body"></div>
+    </div>
     <script src="/__/firebase/6.0.2/firebase-app.js"> </script>
     <!-- TODO: Add SDKs for Firebase products that you want
     to use https://firebase.google.com/docs/web/setup#reserved-urls -->
@@ -62,9 +95,8 @@
     <!-- Add Firebase products that you want to use -->
     <script src="/__/firebase/6.0.2/firebase-auth.js"></script>
     <script src="/__/firebase/6.0.2/firebase-database.js"></script>
-    <script src="/pages/add/resources/scripts/addnew.js"></script>
     <script src="/resources/scripts/user.js"></script>
-
+    <script src="/pages/add/resources/scripts/addnew.js"></script>
 </body>
 
 </html>

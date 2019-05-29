@@ -3,13 +3,13 @@ firebase.auth().onAuthStateChanged((user) => {
     var accessButton = document.getElementById("access");
     if (user) {
         console.log("Logged in");
-        accessButton.setAttribute("onclick","signOut()");
+        accessButton.setAttribute("onclick", "signOut()");
         accessButton.text = "Logout";
         username.text = firebase.auth().currentUser.displayName;
     } else {
         // User not logged in or has just logged out.
         console.log("Not Logged in");
-        accessButton.setAttribute("onclick","signIn()");
+        accessButton.setAttribute("onclick", "signIn()");
         accessButton.text = "Login";
     }
 });
