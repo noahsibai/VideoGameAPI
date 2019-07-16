@@ -23,10 +23,10 @@ function add() {
                 completed: completedValue,
                 genre: genre.value
             });
-
-            // $('.toast-header').html("Game Created");
-            // $('.toast-body').html("Title:" + title.value);
-            $('.toast').toast({delay:1000, animation:false});
+            var closeButton = '<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+            $('.toast-header').html("Game Created" + closeButton);
+            $('.toast-body').html("Title: " + title.value);
+            $('.toast').toast('show');
         }
     });
 }
